@@ -15,6 +15,14 @@
     {
       "label": "blog",
       "href": "/blog"
+    },
+    {
+      "label": "careers",
+      "href": "/careers"
+    },
+    {
+      "label": "pricing",
+      "href": "/pricing"
     }
   ]
 }

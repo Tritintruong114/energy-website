@@ -17,6 +17,8 @@
     "@notion-render/client": "^0.0.2",
     "@notion-render/hljs-plugin": "^0.0.2",
     "@notionhq/client": "^2.2.14",
+    "@smakss/react-scroll-direction": "^4.1.0",
+    "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
     "embla-carousel": "^8.0.2",

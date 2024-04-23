@@ -1,4 +1,4 @@
-import { Heading } from "@/components/elements";
+import { Button, Heading } from "@/components/elements";
 import { Container, Section } from "@/components/layouts";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
@@ -20,9 +20,7 @@ const Hero = () => {
               clean, renewable energy sources transform the way we power our
               lives.
             </p>
-            <button className="bg-primary-300 hover:bg-primary-400 rounded-full px-6 py-4 duration-300">
-              See our Solutions
-            </button>
+            <Button variant="secondary">See our Solutions</Button>
           </div>
         </div>
       </Container>
