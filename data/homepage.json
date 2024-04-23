@@ -1,0 +1,48 @@
+{
+  "homepage": {
+    "hero": {
+      "title": "bruno truong",
+      "locate": "viet nam 🇻🇳",
+      "passionate": "build crazy stuff",
+      "expertise": "creative development",
+      "marquee": ["visonary", "soulful", "creative", "passionate"],
+      "projects": [
+        {
+          "projectTitle": "mh",
+          "projectLink": "",
+          "projectImg": "/images/mh.jpg"
+        },
+        {
+          "projectTitle": "cfd",
+          "projectLink": "",
+          "projectImg": "/images/cfd.jpg"
+        },
+        {
+          "projectTitle": "wooder",
+          "projectLink": "",
+          "projectImg": "/images/wooder.png"
+        },
+        {
+          "projectTitle": "one cycle",
+          "projectLink": "",
+          "projectImg": "/images/cycle.jpg"
+        },
+        {
+          "projectTitle": "hybrbase",
+          "projectLink": "",
+          "projectImg": "/images/hybrbase.jpg"
+        },
+        {
+          "projectTitle": "crypto flow",
+          "projectLink": "",
+          "projectImg": "/images/crypto.jpg"
+        },
+        {
+          "projectTitle": "maison de villa",
+          "projectLink": "",
+          "projectImg": "/images/maison.png"
+        }
+      ]
+    }
+  }
+}

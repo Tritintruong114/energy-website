@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "tsBuildInfoFile": "path/to/buildInfoFile.tsbuildinfo",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "composite": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "libs/notion/notion.js",
+    "libs/notion/notion.js",
+    " prettier.config.js",
+    "prettier.config.js"
+  ],
+  "exclude": ["node_modules"]
+}
