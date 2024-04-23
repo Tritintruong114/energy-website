@@ -1,14 +1,16 @@
 "use client";
 import { Button, Logo, Menu } from "@/components/elements";
 import headerData from "@/data/header.json";
+
 import { useWindScreenowSize } from "@/hooks/useWindowSize";
 import useDetectScroll from "@smakss/react-scroll-direction";
+
 import cx from "classnames";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export const Header = () => {
-  const { scrollDir, scrollPosition } = useDetectScroll();
+  const { scrollDir } = useDetectScroll();
 
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => {
@@ -27,7 +29,7 @@ export const Header = () => {
     <header
       className={cx(
         "z-50 sm:border-b-2 duration-300 bg-secondary-950 border-primary-300 fixed w-full py-6",
-        scrollDir === "down" && "-translate-y-full"
+        scrollDir === "down" ? "-translate-y-full" : "translate-y-0"
       )}
     >
       <div className="container flex justify-between">
