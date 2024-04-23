@@ -1,0 +1,52 @@
+{
+  "name": "gsap",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate": "plop",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "@gsap/react": "^2.1.0",
+    "@notion-render/bookmark-plugin": "^0.0.2",
+    "@notion-render/client": "^0.0.2",
+    "@notion-render/hljs-plugin": "^0.0.2",
+    "@notionhq/client": "^2.2.14",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.0",
+    "embla-carousel": "^8.0.2",
+    "embla-carousel-react": "^8.0.2",
+    "gsap": "^3.12.5",
+    "highlight.js": "^11.9.0",
+    "imagesloaded": "^5.0.0",
+    "next": "14.0.3",
+    "notion-block-renderer": "^2.3.13",
+    "notion-to-md": "^3.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.3"
+  },
+  "devDependencies": {
+    "@types/imagesloaded": "^4.1.6",
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-slick": "^0.23.13",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.0.3",
+    "husky": "^8.0.3",
+    "plop": "^4.0.1",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "react-responsive-carousel": "^3.2.23",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  }
+}
