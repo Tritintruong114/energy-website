@@ -1,3 +1,4 @@
+export * from "./ArrowUp";
 export * from "./Check";
 export * from "./Ev";
 export * from "./Facebook";
@@ -12,3 +13,6 @@ export * from "./Save";
 export * from "./Solar";
 export * from "./User";
 export * from "./Wind";
+
+export * from "./Clock";
+export * from "./Location";
