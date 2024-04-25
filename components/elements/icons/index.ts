@@ -10,6 +10,7 @@ export * from "./Linkedln";
 export * from "./Location";
 export * from "./Logo";
 export * from "./Menu";
+export * from "./NoneCheck";
 export * from "./Renewable";
 export * from "./Save";
 export * from "./Solar";

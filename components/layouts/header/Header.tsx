@@ -33,13 +33,13 @@ export const Header = () => {
       )}
     >
       <div className="container flex justify-between">
-        <div className="flex justify-center items-center gap-10">
+        <div className="flex justify-center items-center md:gap-10">
           <Link href="/" className="z-10">
             <Logo />
           </Link>
           <nav
             className={cx(
-              "list-none bg-secondary-950 sm:bg-transparent  duration-300 sm:translate-y-0 absolute h-screen top-0 left-0 w-screen justify-center flex-col sm:relative sm:h-fit sm:w-fit sm:flex-row  flex items-center text-white gap-8",
+              "list-none bg-secondary-950 md:bg-transparent  duration-300 md:translate-y-0 absolute h-screen top-0 left-0 w-screen justify-center flex-col md:relative md:h-fit md:w-fit md:flex-row  flex items-center text-white gap-8",
               showMenu === true ? "translate-y-0" : "-translate-y-full"
             )}
           >
@@ -58,7 +58,7 @@ export const Header = () => {
         <div className="flex h-fit z-10">
           <button
             onClick={toggleMenu}
-            className="p-3 flex items-center justify-center border w-fit sm:hidden rounded-full"
+            className="p-3 flex items-center justify-center border w-fit md:hidden rounded-full"
           >
             <Menu />
           </button>
