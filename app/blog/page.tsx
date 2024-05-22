@@ -1,4 +1,4 @@
-import { Container, Heading, Section, SubTitle } from "@/components";
+import { Container, Heading, Section } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +6,6 @@ const BlogPage = () => {
   return (
     <Section className="bg-secondary-950">
       <Container>
-        <SubTitle subTitle="Our blog" />
         <div className="text-white">
           <Heading as="h1" className="text-hero leading-none">
             Our Latest Posts

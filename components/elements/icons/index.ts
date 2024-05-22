@@ -16,3 +16,5 @@ export * from "./Wind";
 
 export * from "./Clock";
 export * from "./Location";
+export * from "./Notfound";
+export * from "./Notfound-bg";

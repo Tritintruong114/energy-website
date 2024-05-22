@@ -1,4 +1,4 @@
-import { Heading, SubTitle } from "@/components/elements";
+import { Heading } from "@/components/elements";
 import { Container, Section } from "@/components/layouts";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +7,6 @@ export const Blog = () => {
   return (
     <Section className=" bg-secondary-950">
       <Container>
-        <SubTitle subTitle="Blog" />
         <div>
           <div className="w-full flex justify-between items-center">
             <Heading as="h2" className="text-section leading-none text-white">
