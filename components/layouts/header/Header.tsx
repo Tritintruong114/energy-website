@@ -7,12 +7,17 @@ import useDetectScroll from "@smakss/react-scroll-direction";
 
 import cx from "classnames";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export const Header = () => {
   const { scrollDir } = useDetectScroll();
 
+  const pathname = usePathname();
+  const isSanityStudio = pathname.startsWith("/editor");
+
   const [showMenu, setShowMenu] = useState(false);
+
   const toggleMenu = () => {
     setShowMenu((prev) => !prev);
   };
@@ -28,8 +33,9 @@ export const Header = () => {
   return (
     <header
       className={cx(
-        "z-50 sm:border-b-2 duration-300 bg-secondary-950 border-primary-300 fixed w-full py-6",
-        scrollDir === "down" ? "-translate-y-full" : "translate-y-0"
+        " sm:border-b-2 duration-300 bg-secondary-950 border-primary-300 fixed w-full py-6",
+        scrollDir === "down" ? "-translate-y-full" : "translate-y-0",
+        isSanityStudio ? "z-0" : "z-20"
       )}
     >
       <div className="container flex justify-between">

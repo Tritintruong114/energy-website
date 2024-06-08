@@ -17,6 +17,8 @@
     "@notion-render/client": "^0.0.2",
     "@notion-render/hljs-plugin": "^0.0.2",
     "@notionhq/client": "^2.2.14",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.43.0",
     "@smakss/react-scroll-direction": "^4.1.0",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
@@ -26,12 +28,15 @@
     "gsap": "^3.12.5",
     "highlight.js": "^11.9.0",
     "imagesloaded": "^5.0.0",
-    "next": "14.0.3",
+    "next": "^14.2.3",
+    "next-sanity": "^9.3.0",
     "notion-block-renderer": "^2.3.13",
     "notion-to-md": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-fast-marquee": "^1.6.3"
+    "react-fast-marquee": "^1.6.3",
+    "sanity": "^3.43.0",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@types/imagesloaded": "^4.1.6",
