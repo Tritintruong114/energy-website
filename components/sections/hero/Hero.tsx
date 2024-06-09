@@ -10,7 +10,6 @@ import Marquee from "react-fast-marquee";
 const Hero = async () => {
   const data = await getHomepage();
   const { hero, gallery, promotion } = data;
-  console.log(promotion);
 
   return (
     <Section className="bg-secondary-950 h-fit flex flex-col gap-32">

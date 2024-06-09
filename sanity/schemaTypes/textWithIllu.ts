@@ -18,6 +18,14 @@ const textWithIllustrationType = defineType({
       type: "text",
     }),
     defineField({
+      name: "icon",
+      type: "string",
+    }),
+    defineField({
+      name: "cta",
+      type: "promotion",
+    }),
+    defineField({
       name: "image",
       type: "image",
       options: { hotspot: true },

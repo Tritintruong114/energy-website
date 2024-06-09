@@ -1,8 +1,12 @@
 import { Heading, SubTitle } from "@/components/elements";
 import { Container, Section } from "@/components/layouts";
+import { getHomepage } from "@/sanity/queries/page";
 import { TestimonialsCarousel } from "./Testimonials-carousel";
 
-export const Testimonials = () => {
+export const Testimonials = async () => {
+  const data = await getHomepage();
+
+  console.log(data.testimonials);
   return (
     <Section className="bg-secondary-950 rounded-3xl">
       <Container className="flex flex-col items-center">
@@ -15,7 +19,7 @@ export const Testimonials = () => {
           What our customers say
         </Heading>
         <div className="mt-24">
-          <TestimonialsCarousel />
+          <TestimonialsCarousel users={data.testimonials} />
         </div>
       </Container>
     </Section>

@@ -1,4 +1,4 @@
-export const SaveEnergy = () => {
+export const Saveenergy = () => {
   return (
     <svg
       width="48"
