@@ -8,6 +8,7 @@ import imageGalleryType from "./schemaTypes/gallery";
 import { heroType } from "./schemaTypes/hero";
 import { metricsType } from "./schemaTypes/metrics";
 import { ourExpertsType } from "./schemaTypes/ourExpert";
+import { ourPhilosophy } from "./schemaTypes/ourPhilosophy";
 import pageType from "./schemaTypes/page";
 import post from "./schemaTypes/post";
 import { promotionType } from "./schemaTypes/promotionType";
@@ -28,6 +29,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     ourExpertsType,
     promotionType,
     solutionsType,
+    ourPhilosophy,
     imageGalleryType,
     testimonialsType,
     textWithIllustrationType,

@@ -1,4 +1,3 @@
-import { DocumentTextIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
 export const aboutUsType = defineType({
@@ -27,6 +26,18 @@ export const aboutUsType = defineType({
       type: "promotion",
     }),
     defineField({
+      name: "image",
+      type: "image",
+    }),
+    defineField({
+      name: "aboutUsImageLeft",
+      type: "image",
+    }),
+    defineField({
+      name: "aboutUsImageRight",
+      type: "image",
+    }),
+    defineField({
       name: "solutions",
       type: "array",
       of: [
@@ -37,11 +48,38 @@ export const aboutUsType = defineType({
       ],
     }),
     defineField({
+      name: "aboutUsContentRight",
+      type: "array",
+      of: [
+        defineField({
+          name: "solution",
+          type: "textWithIllustration",
+        }),
+        defineField({
+          name: "image",
+          type: "image",
+        }),
+      ],
+    }),
+    defineField({
+      name: "aboutUsContentLeft",
+      type: "array",
+      of: [
+        defineField({
+          name: "solution",
+          type: "textWithIllustration",
+        }),
+        defineField({
+          name: "image",
+          type: "image",
+        }),
+      ],
+    }),
+    defineField({
       name: "slider",
       type: "gallery",
     }),
   ],
-  icon: DocumentTextIcon,
   preview: {
     select: {
       title: "heading",
@@ -51,7 +89,6 @@ export const aboutUsType = defineType({
       return {
         title: title || "Untitled",
         subtitle: "About Us",
-        media: image || DocumentTextIcon,
       };
     },
   },

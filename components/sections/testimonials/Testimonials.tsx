@@ -6,7 +6,6 @@ import { TestimonialsCarousel } from "./Testimonials-carousel";
 export const Testimonials = async () => {
   const data = await getHomepage();
 
-  console.log(data.testimonials);
   return (
     <Section className="bg-secondary-950 rounded-3xl">
       <Container className="flex flex-col items-center">

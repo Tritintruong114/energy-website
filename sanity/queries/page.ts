@@ -71,3 +71,57 @@ export async function getHomepage() {
     revalidate: new Date().getSeconds(),
   });
 }
+export async function getAboutpage() {
+  const getPageQuery = groq`*[_type == "page"][slug == 'about-us'][0]{
+    slug,
+
+    'hero':pageBuilder[][_type == "hero"][0]{
+      heading,
+      tagline,
+      'heroImage':image.asset->url,
+
+    },
+
+    'promotion':pageBuilder[][_type == "promotion"][0]{
+      link,
+      title
+    },
+    'ourPhilosophy':pageBuilder[][_type == 'ourPhilosophy'][0]
+    {
+      heading,
+      cta,
+      philosophys[]
+      {
+        heading,
+        tagline,
+        excerpt
+      }
+
+    },
+        'aboutUs':pageBuilder[][_type == 'aboutUs'][0]
+    {
+
+      aboutUsContentLeft[],
+      aboutUsContentRight[],
+      'aboutUsImageLeft':aboutUsImageLeft.asset->url,
+      'aboutUsImageRight':aboutUsImageRight.asset->url
+    },
+
+    'ourExperts':pageBuilder[][_type == "ourExperts"][0]{
+      heading,
+      tagline,
+      excerpt,
+      'ourExperts':ourExperts[]{
+      'link': cta.link, 
+      'image': image.asset-> url,
+      tagline,
+      heading
+      }
+    },
+  
+}`;
+
+  return await client.fetch(getPageQuery, {
+    revalidate: new Date().getSeconds(),
+  });
+}
