@@ -13,6 +13,8 @@ import { ourExpertsType } from "./schemaTypes/ourExpert";
 import { ourPhilosophy } from "./schemaTypes/ourPhilosophy";
 import pageType from "./schemaTypes/page";
 import post from "./schemaTypes/post";
+import priceType from "./schemaTypes/price";
+import { priceInformationType } from "./schemaTypes/priceInformation";
 import { promotionType } from "./schemaTypes/promotionType";
 import { solutionsType } from "./schemaTypes/solutions";
 import { testimonialsType } from "./schemaTypes/testimonials";
@@ -26,6 +28,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     category,
     heroType,
     pageType,
+    priceType,
     aboutUsType,
     metricsType,
     blockContent,
@@ -36,6 +39,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     imageGalleryType,
     testimonialsType,
     jobInformationType,
+    priceInformationType,
     textWithIllustrationType,
   ],
 };

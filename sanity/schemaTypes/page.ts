@@ -53,6 +53,10 @@ const pageType = defineType({
           name: "job",
           type: "job",
         }),
+        defineArrayMember({
+          name: "price",
+          type: "price",
+        }),
 
         //  Elements
         defineArrayMember({
@@ -62,6 +66,10 @@ const pageType = defineType({
         defineArrayMember({
           name: "textWithIllustration",
           type: "textWithIllustration",
+        }),
+        defineArrayMember({
+          name: "priceInformation",
+          type: "priceInformation",
         }),
       ],
     }),
