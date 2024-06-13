@@ -33,10 +33,7 @@ export const aboutUsType = defineType({
       name: "aboutUsImageLeft",
       type: "image",
     }),
-    defineField({
-      name: "aboutUsImageRight",
-      type: "image",
-    }),
+
     defineField({
       name: "solutions",
       type: "array",
@@ -47,34 +44,7 @@ export const aboutUsType = defineType({
         }),
       ],
     }),
-    defineField({
-      name: "aboutUsContentRight",
-      type: "array",
-      of: [
-        defineField({
-          name: "solution",
-          type: "textWithIllustration",
-        }),
-        defineField({
-          name: "image",
-          type: "image",
-        }),
-      ],
-    }),
-    defineField({
-      name: "aboutUsContentLeft",
-      type: "array",
-      of: [
-        defineField({
-          name: "solution",
-          type: "textWithIllustration",
-        }),
-        defineField({
-          name: "image",
-          type: "image",
-        }),
-      ],
-    }),
+
     defineField({
       name: "slider",
       type: "gallery",

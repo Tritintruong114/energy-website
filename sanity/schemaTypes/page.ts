@@ -49,6 +49,10 @@ const pageType = defineType({
           name: "ourPhilosophy",
           type: "ourPhilosophy",
         }),
+        defineArrayMember({
+          name: "job",
+          type: "job",
+        }),
 
         //  Elements
         defineArrayMember({

@@ -125,3 +125,28 @@ export async function getAboutpage() {
     revalidate: new Date().getSeconds(),
   });
 }
+
+export async function getCareerpage() {
+  const getPageQuery = groq`*[_type == "page"][slug == 'career'][0]{
+
+    
+    'hero':pageBuilder[][_type == "hero"][0]{
+      heading,
+      tagline
+    },
+
+    'jobsBoard':pageBuilder[][_type == "job"][]{
+      available[]{
+        location,
+        title,
+        type,
+        link
+      },
+      department
+    },
+
+    }`;
+  return await client.fetch(getPageQuery, {
+    revalidate: new Date().getSeconds(),
+  });
+}

@@ -6,6 +6,8 @@ import blockContent from "./schemaTypes/blockContent";
 import category from "./schemaTypes/category";
 import imageGalleryType from "./schemaTypes/gallery";
 import { heroType } from "./schemaTypes/hero";
+import jobType from "./schemaTypes/job";
+import { jobInformationType } from "./schemaTypes/jobInformation";
 import { metricsType } from "./schemaTypes/metrics";
 import { ourExpertsType } from "./schemaTypes/ourExpert";
 import { ourPhilosophy } from "./schemaTypes/ourPhilosophy";
@@ -20,6 +22,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     post,
     author,
+    jobType,
     category,
     heroType,
     pageType,
@@ -32,6 +35,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     ourPhilosophy,
     imageGalleryType,
     testimonialsType,
+    jobInformationType,
     textWithIllustrationType,
   ],
 };
