@@ -137,3 +137,41 @@ export async function getCareerpage() {
     revalidate: new Date().getSeconds(),
   });
 }
+
+export async function getPricingPage() {
+  const getPageQuery = groq`*[_type == "page"][slug == 'pricing'][0]{
+    
+    'hero':pageBuilder[][_type == "hero"][0]{
+      heading,
+      tagline
+    },
+    'price':pageBuilder[][_type == "price"][0]{
+      availablePlan[]
+      {
+        benefits,
+        cta
+        {
+          link,
+          title
+        },
+        desc,
+        plan,
+        price,
+        recommended,
+        time
+      }
+    },
+    'consultation':pageBuilder[][_type == "textWithIllustration"][0]{
+      cta{
+        link,
+        title
+      },
+      excerpt,
+      heading,
+      icon
+    },
+    }`;
+  return await client.fetch(getPageQuery, {
+    revalidate: new Date().getSeconds(),
+  });
+}

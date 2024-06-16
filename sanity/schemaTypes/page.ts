@@ -41,6 +41,14 @@ const pageType = defineType({
           type: "solutions",
         }),
         defineArrayMember({
+          name: "price",
+          type: "price",
+        }),
+        defineArrayMember({
+          name: "priceInformation",
+          type: "priceInformation",
+        }),
+        defineArrayMember({
           name: "aboutUs",
           type: "aboutUs",
         }),
