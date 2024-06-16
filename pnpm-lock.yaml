@@ -23,6 +23,9 @@ dependencies:
   '@notionhq/client':
     specifier: ^2.2.14
     version: 2.2.14
+  '@portabletext/react':
+    specifier: ^3.1.0
+    version: 3.1.0(react@18.2.0)
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
@@ -62,6 +65,9 @@ dependencies:
   next-sanity:
     specifier: ^9.3.0
     version: 9.3.0(@sanity/client@6.18.3)(@sanity/icons@2.11.8)(@sanity/types@3.43.0)(@sanity/ui@2.1.12)(next@14.2.3)(react@18.2.0)(sanity@3.43.0)(styled-components@6.1.11)
+  next-share:
+    specifier: ^0.27.0
+    version: 0.27.0(react@18.2.0)
   notion-block-renderer:
     specifier: ^2.3.13
     version: 2.3.13(react@18.2.0)
@@ -77,6 +83,9 @@ dependencies:
   react-fast-marquee:
     specifier: ^1.6.3
     version: 1.6.3(react-dom@18.2.0)(react@18.2.0)
+  react-share:
+    specifier: ^5.1.0
+    version: 5.1.0(react@18.2.0)
   sanity:
     specifier: ^3.43.0
     version: 3.43.0(@types/node@20.11.5)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.11)
@@ -2402,11 +2411,11 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@portabletext/react@3.0.18(react@18.2.0):
-    resolution: {integrity: sha512-AsWiZin7GpA8RTTl9kmR5wiMj72Ynotjjw0bBgbmL0vOYp0jc8nNslJyPPMSMngSLzLa8+rPAg47+d9KtrzLVw==}
+  /@portabletext/react@3.1.0(react@18.2.0):
+    resolution: {integrity: sha512-ZGHlvS+NvId9RSqnflN8xF2KVZgAgD399dK1GaycurnGNZGZYTd5nZmc8by1yL76Ar8n/dbVtouUDJIkO4Tupw==}
     engines: {node: ^14.13.1 || >=16.0.0}
     peerDependencies:
-      react: ^17 || ^18
+      react: ^17 || ^18 || >=19.0.0-rc
     dependencies:
       '@portabletext/toolkit': 2.0.15
       '@portabletext/types': 2.0.13
@@ -6574,6 +6583,14 @@ packages:
     hasBin: true
     dev: false
 
+  /jsonp@0.2.1:
+    resolution: {integrity: sha512-pfog5gdDxPdV4eP7Kg87M8/bHgshlZ5pybl+yKxAnCZ5O7lCIn7Ixydj03wOlnDQesky2BPyA91SQ+5Y/mNwzw==}
+    dependencies:
+      debug: 2.6.9
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /jsx-ast-utils@3.3.5:
     resolution: {integrity: sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==}
     engines: {node: '>=4.0'}
@@ -7023,7 +7040,7 @@ packages:
       sanity: ^3.37.1
       styled-components: ^6.1
     dependencies:
-      '@portabletext/react': 3.0.18(react@18.2.0)
+      '@portabletext/react': 3.1.0(react@18.2.0)
       '@sanity/client': 6.18.3
       '@sanity/icons': 2.11.8(react@18.2.0)
       '@sanity/preview-kit': 5.0.59(@sanity/client@6.18.3)(react@18.2.0)
@@ -7040,6 +7057,18 @@ packages:
       - '@remix-run/react'
       - '@sveltejs/kit'
       - svelte
+    dev: false
+
+  /next-share@0.27.0(react@18.2.0):
+    resolution: {integrity: sha512-Fmfl4LIL61g10vtiDECVldxtNgVNd4OQgnI5vk9IJxn/WMZLdhniUtV15xz4PGpo8UuDdTHwmDT8R/CP60EQHA==}
+    engines: {node: '>=8', npm: '>=5'}
+    peerDependencies:
+      react: '>=17.0.2'
+    dependencies:
+      jsonp: 0.2.1
+      react: 18.2.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /next@14.2.3(@babel/core@7.24.6)(react-dom@18.2.0)(react@18.2.0):
@@ -8070,6 +8099,18 @@ packages:
       use-sync-external-store: 1.2.2(react@18.2.0)
     dev: false
 
+  /react-share@5.1.0(react@18.2.0):
+    resolution: {integrity: sha512-OvyfMtj/0UzH1wi90OdHhZVJ6WUC/+IeWvBwppeZozwIGyAjQgyR0QXlHOrxVHVECqnGvcpBaFTXVrqouTieaw==}
+    peerDependencies:
+      react: ^17 || ^18
+    dependencies:
+      classnames: 2.5.1
+      jsonp: 0.2.1
+      react: 18.2.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /react-style-proptype@3.2.2:
     resolution: {integrity: sha512-ywYLSjNkxKHiZOqNlso9PZByNEY+FTyh3C+7uuziK0xFXu9xzdyfHwg4S9iyiRRoPCR4k2LqaBBsWVmSBwCWYQ==}
     dependencies:
@@ -8449,7 +8490,7 @@ packages:
       '@dnd-kit/sortable': 7.0.2(@dnd-kit/core@6.1.0)(react@18.2.0)
       '@dnd-kit/utilities': 3.2.2(react@18.2.0)
       '@juggle/resize-observer': 3.4.0
-      '@portabletext/react': 3.0.18(react@18.2.0)
+      '@portabletext/react': 3.1.0(react@18.2.0)
       '@rexxars/react-json-inspector': 8.0.1(react@18.2.0)
       '@sanity/asset-utils': 1.3.0
       '@sanity/bifur-client': 0.3.1

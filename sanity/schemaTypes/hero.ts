@@ -1,4 +1,3 @@
-import { DocumentTextIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
 export const heroType = defineType({
@@ -31,7 +30,6 @@ export const heroType = defineType({
       ],
     }),
   ],
-  icon: DocumentTextIcon,
   preview: {
     select: {
       title: "heading",
@@ -41,7 +39,6 @@ export const heroType = defineType({
       return {
         title: title || "Untitled",
         subtitle: "Hero",
-        media: image || DocumentTextIcon,
       };
     },
   },

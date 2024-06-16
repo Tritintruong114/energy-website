@@ -1,4 +1,3 @@
-import { DocumentTextIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
 export const testimonialsType = defineType({
@@ -41,7 +40,6 @@ export const testimonialsType = defineType({
       type: "gallery",
     }),
   ],
-  icon: DocumentTextIcon,
   preview: {
     select: {
       title: "heading",
@@ -51,7 +49,6 @@ export const testimonialsType = defineType({
       return {
         title: title || "Untitled",
         subtitle: "Testimonials",
-        media: image || DocumentTextIcon,
       };
     },
   },
