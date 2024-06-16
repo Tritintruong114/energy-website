@@ -1,9 +1,9 @@
 import { defineField, defineType } from "sanity";
 
-export const testimonialsType = defineType({
-  name: "testimonials",
+export const ourExpertsType = defineType({
+  name: "ourExperts",
   type: "object",
-  title: "Testimonials",
+  title: "Our Experts",
   fields: [
     defineField({
       name: "heading",
@@ -26,11 +26,11 @@ export const testimonialsType = defineType({
       type: "promotion",
     }),
     defineField({
-      name: "Testimonials",
+      name: "ourExperts",
       type: "array",
       of: [
         defineField({
-          name: "testimonial",
+          name: "Expert",
           type: "textWithIllustration",
         }),
       ],
@@ -44,7 +44,7 @@ export const testimonialsType = defineType({
     prepare({ title, image }) {
       return {
         title: title || "Untitled",
-        subtitle: "Testimonials",
+        subtitle: "Our Experts",
       };
     },
   },

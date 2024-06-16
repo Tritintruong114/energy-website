@@ -19,7 +19,51 @@ export async function getHomepage() {
         'url':url
       }
     },
-  
+
+    'solutions':pageBuilder[][_type == "solutions"][0]{
+      heading,
+      tagline,
+      cta,
+      solutions
+    },
+      'aboutUs':pageBuilder[][_type == "aboutUs"][0]{
+      heading,
+      tagline,
+      excerpt,
+      solutions,
+      cta,
+      'slider':slider.images[].asset->{
+        'url':url
+      }
+    },
+    'metrics':pageBuilder[][_type == "metrics"][0]{
+      heading,
+      tagline,
+      'metrics':Metrics[]
+    },
+    
+    'ourExperts':pageBuilder[][_type == "ourExperts"][0]{
+      heading,
+      tagline,
+      excerpt,
+      'ourExperts':ourExperts[]{
+      'link': cta.link, 
+      'image': image.asset-> url,
+      tagline,
+      heading
+      }
+    },
+
+    'testimonials':pageBuilder[][_type == "testimonials"][0]{
+      heading,
+      tagline,
+      Testimonials[]{
+        excerpt,
+        heading,
+        tagline,
+        'image': image.asset-> url
+      }
+    },
 }`;
 
   return await client.fetch(getPageQuery, {
