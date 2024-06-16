@@ -33,6 +33,10 @@ const pageType = defineType({
           type: "gallery",
         }),
         defineArrayMember({
+          name: "job",
+          type: "job",
+        }),
+        defineArrayMember({
           name: "solutions",
           type: "solutions",
         }),
@@ -51,6 +55,10 @@ const pageType = defineType({
         defineArrayMember({
           name: "ourExperts",
           type: "ourExperts",
+        }),
+        defineArrayMember({
+          name: "ourPhilosophy",
+          type: "ourPhilosophy",
         }),
       ],
     }),
