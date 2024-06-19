@@ -175,3 +175,50 @@ export async function getPricingPage() {
     revalidate: new Date().getSeconds(),
   });
 }
+
+export async function getBlogPage() {
+  const getPageQuery = groq`*[_type == "post"][]
+  {
+    'categories': categories[]->title,
+    'slug':slug.current,
+    'desc':desc,
+    publishedAt,
+    "name": author->name,
+    "authorImage": author->{
+      'image':image.asset->url
+    },
+    "authorBio": author->bio,
+    "authorSocial":author->social,
+    'content':body,
+    title,
+    timeRead,
+    'mainImage':mainImage.asset->url
+  }`;
+  return await client.fetch(getPageQuery, {
+    revalidate: new Date().getSeconds(),
+  });
+}
+
+export async function getPostDetail(slug: string) {
+  const getPostDetailQuery = groq`*[_type == "post"][slug.current == $slug][0]{
+    'categories': categories[]->title,
+    'slug':slug.current,
+    publishedAt,
+    "name": author->name,
+    "authorImage": author->{
+      'image':image.asset->url
+    },
+    "authorPostion":author->position,
+    "authorBio": author->bio,
+    "authorSocial":author->social,
+    'content':body,
+    title,
+    timeRead,
+    'mainImage':mainImage.asset->url
+  }`;
+
+  return await client.fetch(getPostDetailQuery, {
+    slug,
+    revalidate: new Date().getSeconds(),
+  });
+}
