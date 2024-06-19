@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
+export const revalidate = 0;
+
 import { Button, Check, Container, Heading, Section } from "@/components";
 import DynamicIcon from "@/components/elements/icons/IconComponent";
 import { getPricingPage } from "@/sanity/queries/page";

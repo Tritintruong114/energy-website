@@ -71,6 +71,7 @@ export async function getHomepage() {
     revalidate: new Date().getSeconds(),
   });
 }
+
 export async function getAboutpage() {
   const getPageQuery = groq`*[_type == "page"][slug == 'about-us'][0]{
     slug,
@@ -79,7 +80,6 @@ export async function getAboutpage() {
       heading,
       tagline,
       'heroImage':image.asset->url,
-
     },
 
     'promotion':pageBuilder[][_type == "promotion"][0]{
@@ -97,14 +97,6 @@ export async function getAboutpage() {
         excerpt
       }
 
-    },
-        'aboutUs':pageBuilder[][_type == 'aboutUs'][0]
-    {
-
-      aboutUsContentLeft[],
-      aboutUsContentRight[],
-      'aboutUsImageLeft':aboutUsImageLeft.asset->url,
-      'aboutUsImageRight':aboutUsImageRight.asset->url
     },
 
     'ourExperts':pageBuilder[][_type == "ourExperts"][0]{

@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import { Container, Heading, LindkedlnFooter, Section } from "@/components";
 import ShareSocialList from "@/components/elements/share/share-social";
 import { client } from "@/sanity/lib/client";

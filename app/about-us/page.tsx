@@ -9,15 +9,15 @@ import {
   Section,
 } from "@/components";
 import { getAboutpage } from "@/sanity/queries/page";
+import { AboutUsType } from "@/sanity/schemaTypes/aboutUs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const AboutUs = async () => {
-  const data = await getAboutpage();
-  const { ourExperts, ourPhilosophy, promotion, hero } = data;
+  const data: AboutUsType = await getAboutpage();
 
-  console.log(hero);
+  const { ourExperts, ourPhilosophy, promotion, hero } = data;
 
   return (
     <React.Fragment>
@@ -54,7 +54,7 @@ const AboutUs = async () => {
             {ourPhilosophy.heading}
           </Heading>
           <div className="grid gap-4 sticky">
-            {ourPhilosophy.philosophys.map((item: any, index: number) => {
+            {ourPhilosophy.philosophys.map((item, index: number) => {
               return (
                 <div
                   key={index}
@@ -86,7 +86,7 @@ const AboutUs = async () => {
           </Heading>
 
           <div className="grid md:grid-cols-3 gap-4">
-            {ourExperts.ourExperts.map((expert: any, index: number) => {
+            {ourExperts.ourExperts.map((expert, index: number) => {
               return (
                 <div
                   key={index}

@@ -51,7 +51,7 @@ export const Header = () => {
           >
             {headerData.header.map((item, index) => {
               return (
-                <li key={index} className="">
+                <li key={index} className="" onClick={toggleMenu}>
                   <Link className="capitalize" href={item.href}>
                     {item.label}
                   </Link>
@@ -68,7 +68,14 @@ export const Header = () => {
           >
             <Menu />
           </button>
-          <Button variant="tetriary-reversed">Get in touch</Button>
+          <Button variant="tetriary-reversed">
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/in/truongtritin-bruno/"
+            >
+              Get in touch
+            </Link>
+          </Button>
         </div>
       </div>
     </header>

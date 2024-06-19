@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import { Container, Heading, Section } from "@/components";
 import { getBlogPage } from "@/sanity/queries/page";
 import Image from "next/image";
